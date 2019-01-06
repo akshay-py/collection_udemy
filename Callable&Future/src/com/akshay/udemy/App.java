@@ -38,9 +38,7 @@ public class App {
 		list.forEach((Future value) -> {
 			try {
 				System.out.println(value.get());
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			} catch (ExecutionException e) {
+			} catch (InterruptedException | ExecutionException e) {
 				e.printStackTrace();
 			}
 		});
